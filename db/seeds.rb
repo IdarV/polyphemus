@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Question.create(question: 'http://burkedist.com/application/files/6914/2108/4266/red_stripe.png', answer: 'red stripe')
