@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="nav navbar-collapse">
+      <h1 class="header text-center">Hello</h1>
+
+      <p><%= @questionnr.to_s unless nil %></p>
+
+
+      <div style="width: 30%" class="center-block">
+        <img class="img-responsive " src="<%= @question.question unless nil%>"/>
+      </div>
+      <br/><br/>
+      <div name="answerform" style="width: 50%" class="center-block">
+
+        <form accept-charset="UTF-8" action="/answer" method="post">
+          <input type="text" name="w" class="form-control"><br>
+          <input name="hehe" id="curious-mind" type="submit" value="Submit" class="btn-info form-control">
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+          <%= hidden_field_tag :questionnr, 1 -%>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
