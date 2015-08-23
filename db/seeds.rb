@@ -6,4 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Question.create(question: 'http://burkedist.com/application/files/6914/2108/4266/red_stripe.png', answer: 'red stripe')
+Question.create(question: 'http://www.odditycentral.com/wp-content/uploads/2010/06/Lonomia-caterpilar3.jpg', answer: 'lonomia')
+Question.create(question: 'http://4.bp.blogspot.com/_3tG1-DP6ie0/TLDpGc_4V1I/AAAAAAAAA7M/CcpIRqukHkw/s320/ruby_rails.png', answer: 'ruby on rails')

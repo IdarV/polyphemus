@@ -9,12 +9,15 @@ class QuestionsController < ApplicationController
 
   def hello
     @question = Question.first
-    @questionnr = params[:questionnr]
+    @questionnr = 1
     render 'questions/hello'
   end
 
   def answer
-    @hello = 'helloe'
+    correct = Question.validate_answer(params[:questionnr], params[:w])
+    @questionnr =  params[:questionnr].to_i
+    @questionnr += 1 if correct
+    @question = Question.find(@questionnr)
     render 'questions/hello'
   end
 
