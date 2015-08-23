@@ -18,6 +18,10 @@ class QuestionsController < ApplicationController
     @questionnr =  params[:questionnr].to_i
     @questionnr += 1 if correct
     @question = Question.find(@questionnr)
+
+    if @questionnr == 2
+      @header = 'swag'
+    end
     render 'questions/hello'
   end
 

@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Polyphemus</title>
+  <title>
+    <% if @header
+         not nil? %>
+        <%= @header.to_s %>
+    <% else %>
+        <%= 'Polyphemus' %>
+    <% end %>
+  </title>
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag    'bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+  <h1 class="header text-center">Polyphemus</h1>
+  <%= stylesheet_link_tag 'bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </head>
